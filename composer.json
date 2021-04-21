@@ -1,0 +1,38 @@
+{
+  "require": {
+    "craftcms/cms": "3.5.14",
+    "vlucas/phpdotenv": "^2.4.0",
+    "nystudio107/craft-twigpack": "1.2.6",
+    "craftcms/redactor": "2.4.0",
+    "verbb/expanded-singles": "1.0.12",
+    "aelvan/imager": "v2.4.0",
+    "verbb/super-table": "2.3.3",
+    "mmikkel/cp-field-inspect": "1.0.7",
+    "markhuot/craftql": "^1.3",
+    "born05/craft-assetusage": "2.2.0",
+    "wbrowar/contentstats": "2.1.2",
+    "verbb/default-dashboard": "1.0.8",
+    "carlcs/craft-diywidget": "2.0.2",
+    "verbb/cp-nav": "2.0.9",
+    "ssplugin/ss-twitter-feed": "1.0.6",
+    "codemonauts/craft-instagram-feed": "1.0.5",
+    "craftcms/element-api": "2.6.0",
+    "dukt/twitter": "2.1.4",
+    "wrav/oembed": "1.3.4",
+    "hybridinteractive/craft-position-fieldtype": "1.0.16",
+    "besteadfast/craft-preparse-field": "1.2.1"
+  },
+  "autoload": {
+    "psr-4": {
+      "modules\\cachebustmodule\\": "modules/cachebustmodule/src/"
+    }
+  },
+  "config": {
+    "optimize-autoloader": true
+  },
+  "scripts": {
+    "post-root-package-install": [
+      "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+    ]
+  }
+}

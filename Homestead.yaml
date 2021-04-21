@@ -1,0 +1,70 @@
+---
+ip: '192.168.10.10'
+memory: 2048
+cpus: 1
+provider: virtualbox
+mariadb: true
+
+authorize: ~/.ssh/id_rsa.pub
+
+keys:
+    - ~/.ssh/id_rsa
+
+folders:
+    - map: ~/Repos
+      to: /home/vagrant/Repos
+      type: nfs
+
+sites:
+    #   - map: allan.site
+    #     to: /home/vagrant/Repos/allan-mcevoy/web
+
+    # - map: post.site
+    #   to: /home/vagrant/Repos/post/web
+
+    # - map: atma-world.site
+    #   to: /home/vagrant/Repos/atma-world/web
+
+    # - map: arthur-collin.site
+    #   to: /home/vagrant/Repos/ac/ac-site-4/web
+
+    # - map: type.site
+    #   to: /home/vagrant/Repos/type/web
+
+    # - map: samwilson.site
+    #   to: /home/vagrant/Repos/sam-wilson/web
+
+    - map: dice.site
+      to: /home/vagrant/Repos/dice/web
+
+    # - map: spring.site
+    #   to: /home/vagrant/Repos/spring/web
+
+databases:
+    - atma_world
+    - ac-site-3
+    - post
+    - type
+    - sam_wilson
+    - allan_mcevoy
+    - dice
+    - spring
+
+# ports:
+#     - send: 50000
+#       to: 5000
+#     - send: 7777
+#       to: 777
+#       protocol: udp
+
+# blackfire:
+#     - id: foo
+#       token: bar
+#       client-id: foo
+#       client-token: bar
+
+# zray:
+#  If you've already freely registered Z-Ray, you can place the token here.
+#     - email: foo@bar.com
+#       token: foo
+#  Don't forget to ensure that you have 'zray: "true"' for your site.
